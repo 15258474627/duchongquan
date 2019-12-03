@@ -1,0 +1,20 @@
+<!--pages/userConsole/userConsole.wxml-->
+<view class="container">
+
+  <view class="list">
+    <view wx:for="{{dataList}}" wx:key="{{index}}" class="list-box">
+      <view class="userinfo-avatar" style="background-image: url({{item.userInfo.avatarUrl}})"
+      ></view>
+      <view class="nickName">
+        <view class="person">{{item.userInfo.nickName}}</view>
+        <view class='type'>{{item.switchChange==ture?'寻找':'领养'}}{{item.kind}}</view>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="desc">{{item.desc}}</view>
+      <block wx:for="{{item.tempFilePaths}}" wx:key="{{index}}">
+        <image src="{{item }}" bindtap="listenerButtonPreviewImage" data-index="{{index}}"  class="upload-image"/>
+      </block>
+    </view>
+  </view>
+
+</view>

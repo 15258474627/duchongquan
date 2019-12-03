@@ -1,0 +1,86 @@
+/* pages/release/release.wxss */
+.red{
+  color: red;
+}
+
+.release{
+  margin-top: .5em;
+  margin-bottom: .4em;
+  overflow: hidden;
+}
+.type-title{
+  text-align: center;
+}
+.release-title {
+  color: #666;
+  font-size: 14px;
+}
+.up-title{
+  float:left;
+}
+.inline-title{
+  display: inline-block;
+}
+.box{
+  padding: 10px;
+  display: block;
+}
+/* 标签 */
+radio-group{
+  font-size: 14px;
+}
+checkbox-group{
+  font-size: 14px;
+}
+switch {
+  transform:scale(0.7);
+}
+radio {
+  transform:scale(0.7);
+}
+checkbox {
+  transform:scale(0.7);
+}
+input{
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0 6px;
+  height: 32px;
+  line-height: 32px;
+}
+textarea{
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+
+.btn-area > button{
+  width: 30%;
+  margin: 0 10%;
+  float: left;
+  font-size: 14px;
+}
+.radio-other{
+  height: 40px;
+  display: block;
+}
+.radio-other > input{
+  width: 80px;
+  height: 30px;
+  transform:scale(0.9);
+  float: left;
+}
+.radio-other > radio{
+  float: left;
+  margin-top: 5px;
+}
+/*上传图片*/
+.upload-image-button{
+  font-size: 14px;
+}
+.upload-image{
+  width:28%;
+  height:6em;
+  margin: .4em;
+  float: left;
+}

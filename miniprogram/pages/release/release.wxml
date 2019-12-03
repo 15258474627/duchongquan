@@ -1,0 +1,47 @@
+<!--pages/release/release.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" class="box">
+  <view class="type-title">
+      <label class="{{switchChange==false?'red':''}}">领养</label>
+      <switch checked bindchange="switchType"/>
+      <label class="{{switchChange==true?'red':''}}">寻宠</label>
+  </view>
+  <view class="release">
+    <view class="release-title up-titletitle">标题：</view>
+    <input name="title" placeholder="请输入标题" />
+  </view>
+  <view class="release">
+    <view class="release-title up-titletitle">详细：</view>
+    <textarea name="desc" placeholder="" maxlength='500'/>
+  </view>
+  <view class="release">
+    <view class="release-title inline-title">性别：</view>
+    <radio-group name="sex" class="inline-title">
+      <label><radio value="公"/>公</label>
+      <label><radio value="母"/>母</label>
+    </radio-group>
+  </view>
+  <view class="release">
+    <view class="release-title">种类：</view>
+    <radio-group name="kind">
+      <label><radio value="狗狗"/>狗狗</label>
+      <label><radio value="猫咪"/>猫咪</label>
+      <label><radio value="兔子"/>兔子</label>
+      <label><radio value="仓鼠"/>仓鼠</label>
+      <label><radio value="龙猫"/>龙猫</label>
+      <label class='radio-other'>
+        <radio value="其他" />
+        <input name="kind_other" placeholder="其他"/>
+      </label>
+    </radio-group>
+  </view>
+  <view class="release" bindtap="doUpload">
+    <button bindtap="upload" class="upload-image-button"> 上传图片 </button>
+    <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+      <image src="{{item }}" bindtap="listenerButtonPreviewImage" data-index="{{index}}"  class="upload-image"/>
+    </block>
+  </view>
+  <view class="btn-area">
+    <button type="primary" formType="submit">提交</button>
+    <button type='warn' formType="reset">重置</button>
+  </view>
+</form>

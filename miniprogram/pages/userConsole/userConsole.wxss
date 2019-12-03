@@ -1,0 +1,77 @@
+/* pages/userConsole/userConsole.wxss */
+
+/* @import "../../style/guide.wxss"; */
+page{
+  background:#f6f6f6;
+  -webkit-user-select:none;
+  user-select:none;
+  width:100%;
+  overflow-x:hidden;
+
+}
+.container{
+  align-items:center;
+  box-sizing:border-box;
+}
+.list{
+  margin-top:40rpx;
+  height:auto;
+  width:100%;
+  background:#fff;
+  padding:0 40rpx;
+  border:1px solid rgba(0, 0, 0, 0.1);
+  border-left:none;
+  border-right:none;
+  transition:all 300ms ease;
+}
+.list-box{
+  overflow: hidden;
+  border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+  float: left;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+.nickName{
+  width: 600rpx;
+  height: 100rpx;
+  margin: 20rpx 0;
+  float: left;
+}
+.nickName > .person{
+  font-size: 14px;
+  line-height: 100rpx;
+  display: inline-block;
+}
+.nickName > .type{
+  font-size: 14px;
+  line-height: 100rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+  color: #999;
+}
+.title{
+  width: 100%;
+  padding: 20rpx;
+  float: none;
+}
+.desc{
+  padding: 0 20rpx 20px;
+  font-size: 14px;
+  color: #666;
+}
+.upload-image{
+  width:28%;
+  height:6em;
+  margin: .4em;
+  float: left;
+}
